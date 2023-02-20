@@ -27,20 +27,22 @@ def find_mismatch(text):
                     opening_brackets_stack.pop(len(opening_brackets_stack)-1)
                     # print(opening_brackets_stack)
                 else:
-                    print(i+1)
-                    break
+                    return i+1
+                    
             else:
                 # print("net otkritoj")
-                print()
+                return i+1
                 
             pass
 
 
 def main():
+    type = input()
     text = input()
     mismatch = find_mismatch(text)
     
     # Printing answer, write your code here
+    print(mismatch)
 
 
 if __name__ == "__main__":
